@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: survey-web-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: survey
+  template:
+    metadata:
+      labels:
+        app: survey
+    spec:
+      containers:
+        - name: survey-web-app
+          image: 557690625329.dkr.ecr.us-east-1.amazonaws.com/survey-web-app:latest
+          ports:
+            - containerPort: 80

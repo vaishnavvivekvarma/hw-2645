@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Survey Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+.container {
+  margin-top: 50px;
+  padding: 20px;
+  max-width: 700px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.form-group label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.required::after {
+  content: " *";
+  color: red;
+}
+button {
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="text-center">Student Survey</h2>
+  <form action="#" method="post">
+    <label class="required">First Name:</label>
+    <input type="text" class="form-control" name="first_name" required>
+    
+    <label class="required">Last Name:</label>
+    <input type="text" class="form-control" name="last_name" required>
+    
+    <label class="required">Street Address:</label>
+    <input type="text" class="form-control" name="street_address" required>
+    
+    <label class="required">City:</label>
+    <input type="text" class="form-control" name="city" required>
+    
+    <label class="required">State:</label>
+    <input type="text" class="form-control" name="state" required>
+    
+    <label class="required">Zip Code:</label>
+    <input type="text" class="form-control" name="zip" required>
+    
+    <label class="required">Telephone Number:</label>
+    <input type="tel" class="form-control" name="telephone" required>
+    
+    <label class="required">Email:</label>
+    <input type="email" class="form-control" name="email" required>
+    
+    <label class="required">Date of Survey:</label>
+    <input type="date" class="form-control" name="date_of_survey" required>
+    
+    <label>What did you like most about the campus?</label><br>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="likes" value="students"> Students
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="likes" value="location"> Location
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="likes" value="campus"> Campus
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="likes" value="atmosphere"> Atmosphere
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="likes" value="dorm_rooms"> Dorm Rooms
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="likes" value="sports"> Sports
+    </div>
+    
+    <label class="required">How did you become interested in the university?</label><br>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="interest" value="friends" required> Friends
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="interest" value="television"> Television
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="interest" value="internet"> Internet
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" name="interest" value="other"> Other
+    </div>
+    
+    <label class="required">Would you recommend this school to others?</label>
+    <select class="form-control" name="recommendation" required>
+      <option value="Very Likely">Very Likely</option>
+      <option value="Likely">Likely</option>
+      <option value="Unlikely">Unlikely</option>
+    </select>
+    
+    <label class="required">Raffle (Enter 10 numbers between 1-100, separated by commas):</label>
+    <input type="text" class="form-control" name="raffle" required>
+    
+    <label>Additional Comments:</label>
+    <textarea class="form-control" name="comments"></textarea>
+    
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-danger">Cancel</button>
+  </form>
+</div>
+
+</body>
+</html>
