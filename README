@@ -1,0 +1,33 @@
+# Survey Web App - Kubernetes Deployment
+
+## 📌 Overview
+This repository contains the Kubernetes deployment files and setup for deploying a **Survey Web App** on **Amazon EKS (Elastic Kubernetes Service)**.
+
+## 🚀 Technologies Used
+- **AWS EKS** (Elastic Kubernetes Service)
+- **Amazon ECR** (Elastic Container Registry)
+- **Kubernetes**
+- **Docker**
+- **Load Balancer**
+- **Horizontal Pod Autoscaler (HPA)**
+
+## 📂 Files in This Repo
+- `Dockerfile` → Used to create the Survey Web App container image.
+- `deployment.yaml` → Defines the Kubernetes Deployment.
+- `service.yaml` → Creates a LoadBalancer service to expose the application.
+- `survey-web-app-deployment.yaml` → Detailed deployment specification.
+- `survey.html` → The frontend of the survey app.
+- `eks-trust-policy.json` → IAM Trust Policy for EKS Cluster.
+- `worker-node-trust-policy.json` → IAM Trust Policy for Worker Nodes.
+
+## 📌 How to Deploy the Application
+### **1️⃣ Prerequisites**
+- AWS CLI installed & configured (`aws configure`)
+- Kubectl installed (`kubectl version --client`)
+- AWS IAM permissions for EKS
+- Docker installed
+
+### **2️⃣ Deploy on EKS**
+1. **Create the EKS Cluster**
+   ```sh
+   aws eks create-cluster --name survey-cluster --role-arn arn:aws:iam::<ACCOUNT_ID>:role/EKS-Cluster-Role --resources-vpc-config subnetIds=<SUBNET_IDs>,securityGroupIds=<SECURITY_GROUP_ID>
